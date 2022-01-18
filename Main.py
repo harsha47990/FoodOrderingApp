@@ -3,13 +3,11 @@ import models
 import user
 import hashlib
 
-adminusername = None
-adminpass = None
+adminlogin = False
+
 try:
     with open('admindetails.txt', 'r') as f:
         details = f.readline()
-        adminusername = details.split(':')[0]
-        adminpass = details.split(':')[1]
 except:
     print("Welcome, Please create admin account")
     username = input("enter username: ")
@@ -21,25 +19,30 @@ except:
         repassword = input("Re-Enter Password: ")
     res = hashlib.sha256(password.encode())
     password = res.hexdigest()
-    adminusername = username
-    adminpass = password
+
     with open('admindetails.txt', 'w') as f:
-        f.write(username +":" + password)
+        f.write(username + ":" + password)
     print('Admin account created successfully')
 
 
+
 def login():
-    if username == adminusername and password == adminpass:
+    if admin.adminlogincheck(username, password):
+        global adminlogin
+        adminlogin = True
         return True
     elif user.validateuser(username, password):
+        adminlogin = False
         return True
     return False
 
-#data.ReadFiles()
+
+# data.ReadFiles()
 models.ReadFiles()
 while True:
     try:
-        switch = int(input("Enter \n 1) admin or user login. \n 2) Create new user. \n enter 0 to exit the application: "))
+        switch = int(
+            input("Enter \n 1) admin or user login. \n 2) Create new user. \n enter 0 to exit the application: "))
         if switch not in [0, 1, 2]:
             raise "wrong details entered"
         if switch == 0:
@@ -53,11 +56,14 @@ while True:
             if login():
                 while True:
                     print("Login Successful")
-                    if username == adminusername:
-                        admin.adminFn()
-                    else:
-                        user.userfn()
-                    break
+                    try:
+                        if adminlogin:
+                            admin.adminFn()
+                        else:
+                            user.userfn()
+                        break
+                    except Exception as ex:
+                        print(ex.args)
             else:
                 print("Log in Failed")
 

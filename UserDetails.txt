@@ -1,0 +1,3 @@
+{'userid': '01182022013743', 'username': 'harsha', 'phonenumber': 'test', 'email': 'test', 'address': 'kamaredddy', 'password': '33535c8f17d85eafa712620e2009b0d7f07bf2ee1934c540b25a768aefc3c889'}
+{'userid': '01182022022520', 'username': 'pooja', 'phonenumber': '9958', 'email': 'pooja', 'address': 'varanasi', 'password': '0962ef04822f8ca5b341bcbcd783049a454e96b39d23fe9e18200a3edb400bae'}
+{'userid': '01182022125307', 'username': 'chintu', 'phonenumber': '5727', 'email': 'chintu', 'address': 'kamareddy', 'password': '69ccd2fe77436a63804ce1f571a1f9f6ab8b02bc00ba1099a6d875b639d0d806'}

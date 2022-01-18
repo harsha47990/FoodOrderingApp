@@ -1,0 +1,3 @@
+{'foodid': '01182022011901', 'name': 'coke', 'quantity': '250ml', 'price': '35', 'discount': '0', 'stock': 90, 'active': 'True'}
+{'foodid': '01182022012052', 'name': 'chicken nuggets', 'quantity': '4 pieces', 'price': '120', 'discount': '20', 'stock': 11, 'active': 'True'}
+{'foodid': '01182022011839', 'name': 'chicken biryani', 'quantity': 'single', 'price': '200', 'discount': '25', 'stock': 19, 'active': 'False'}
