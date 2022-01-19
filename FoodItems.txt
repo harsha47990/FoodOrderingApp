@@ -1,3 +1,4 @@
-{'foodid': '01182022011901', 'name': 'coke', 'quantity': '250ml', 'price': '35', 'discount': '0', 'stock': 90, 'active': 'True'}
-{'foodid': '01182022012052', 'name': 'chicken nuggets', 'quantity': '4 pieces', 'price': '120', 'discount': '20', 'stock': 11, 'active': 'True'}
-{'foodid': '01182022011839', 'name': 'chicken biryani', 'quantity': 'single', 'price': '200', 'discount': '25', 'stock': 19, 'active': 'False'}
+{'foodid': '01192022141648', 'name': 'chicken popcorn', 'quantity': '150 grms', 'price': '70', 'discount': '0', 'stock': 4, 'active': 'True'}
+{'foodid': '01192022141855', 'name': 'chicken nuggets', 'quantity': '4 pieces', 'price': '100', 'discount': '20', 'stock': 5, 'active': 'True'}
+{'foodid': '01192022183818', 'name': 'chicken 65', 'quantity': 'single', 'price': '80', 'discount': '0', 'stock': 7, 'active': 'True'}
+{'foodid': '01192022141913', 'name': 'coke', 'quantity': '300ml', 'price': '40', 'discount': '0', 'stock': '10', 'active': 'True'}

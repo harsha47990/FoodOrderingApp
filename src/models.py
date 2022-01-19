@@ -107,6 +107,12 @@ class FoodItem:
                 return item
         return 'Item Not Found'
 
+    @staticmethod
+    def UpdateFoodItemFile():
+        with open('FoodItems.txt', 'w') as fptr:
+            for line in FoodItems:
+                fptr.write(str(line) + '\n')
+
     def __str__(self):
         return str(dict({'foodid': self.foodid, 'name': self.name, 'quantity': self.quantity, 'price': self.price,
                          'discount': self.discount, 'stock': self.stock}))
@@ -289,9 +295,9 @@ class Order:
 
         if isinstance(valueuser, list):
             i = 1
-            for user in highsales:
-                print(str(i) + ') ' + User.user(user)['name']+', No of orders placed = '+ str(maxu))
+            for user in valueuser:
+                print(str(i) + ') ' + User.user(user)['username']+', No of orders placed = ' + str(maxu))
                 i += 1
         else:
-            print('value customer name:', User.user(valueuser)['username']+', No of orders placed = '+ str(maxu))
+            print('value customer name:', User.user(valueuser)['username']+', No of orders placed = ' + str(maxu))
         print('---------------------------------')

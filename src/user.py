@@ -90,7 +90,7 @@ def placeorder():
     for i in myorders:
         for item in FoodItem.allfooditems():
             if item['foodid'] == orderdic[i]:
-                print('%s)%s (%s) [%s]  X%s' % (n, item["name"], item["quantity"], item["price"],myorders[i]))
+                print('%s)%s (%s) [%s]  X%s : amount = [%s]' % (n, item["name"], item["quantity"], item["price"],myorders[i], myorders[i]*(int(item["price"]) - int(item["price"]) * float(item['discount']) / 100)))
                 n += 1
                 #seletedorders.append(item['foodid'])
                 totalamount += myorders[i]*(int(item["price"]) - int(item["price"]) * float(item['discount']) / 100)

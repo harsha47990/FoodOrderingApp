@@ -19,29 +19,41 @@ def addFoodItem():
     discount = input("Discount(%): ")
     stock = input("Stock: ")
     adminuser = FoodItem(name, quantity, price, discount, stock)
-
+    print(name,'added successfully')
 
 def editfoodItem(foodid):
-    edititem = None
-    for item in FoodItem.allfooditems():
-        if item['foodid'] == foodid:
-            edititem = item
-            break
-    if edititem is None:
-        print(foodid, "not found")
-    else:
-        print(edititem)
-        name = input("Updated Name: ")
-        quantity = input("Updated Quantity: ")
-        price = input("Updated Price: ")
-        discount = input("Updated Discount(%): ")
-        stock = input("Updated Stock: ")
-        adminuser = FoodItem(name, quantity, price, discount, stock, foodid, True)
-        print('item updated successfully')
+    print('1) Update Item Stock')
+    print('2) edit Item details')
+    choose = int(input())
+    if choose == 1:
+        print('name = %s \nAvailable Stock = %s \n'%( FoodItem.food(foodid)['name'], FoodItem.food(foodid)['stock']))
+        addstock = int(input("enter new stock: "))
+        FoodItem.food(foodid)['stock'] = int(FoodItem.food(foodid)['stock']) + addstock
+        FoodItem.UpdateFoodItemFile()
+        print('Stocked Updated Successfully')
+
+    if choose == 2:
+
+        edititem = None
+        for item in FoodItem.allfooditems():
+            if item['foodid'] == foodid:
+                edititem = item
+                break
+        if edititem is None:
+            print(foodid, "not found")
+        else:
+            print(edititem)
+            name = input("Updated Name: ")
+            quantity = input("Updated Quantity: ")
+            price = input("Updated Price: ")
+            discount = input("Updated Discount(%): ")
+            stock = input("Updated Stock: ")
+            adminuser = FoodItem(name, quantity, price, discount, stock, foodid, True)
+            print('item updated successfully')
 
 
 def viewAllFoodItems():
-    if FoodItem.allfooditems() is None:
+    if not FoodItem.allfooditems():
         print('No food items present, please add food items.')
     for item in FoodItem.allfooditems():
         if item['active'] == 'True':

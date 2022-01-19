@@ -1,7 +1,12 @@
+import sys
+
+sys.path.insert(0, './src')
+
 import admin
 import models
 import user
 import hashlib
+
 
 adminlogin = False
 
@@ -25,7 +30,6 @@ except:
     print('Admin account created successfully')
 
 
-
 def login():
     if admin.adminlogincheck(username, password):
         global adminlogin
@@ -44,7 +48,7 @@ while True:
         switch = int(
             input("Enter \n 1) admin or user login. \n 2) Create new user. \n enter 0 to exit the application: "))
         if switch not in [0, 1, 2]:
-            raise "wrong details entered"
+            raise "wrong input entered"
         if switch == 0:
             break
         elif switch == 2:
@@ -65,8 +69,8 @@ while True:
                     except Exception as ex:
                         print(ex.args)
             else:
-                print("Log in Failed")
-
+                print("Log in Failed, Invalid Credentials")
+                input('press enter to continue...')
     except:
         print("option invalid, enter only 1 or 2")
         input('press enter to continue...')
