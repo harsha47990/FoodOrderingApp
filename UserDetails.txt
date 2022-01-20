@@ -1,3 +1,0 @@
-{'userid': '01192022141941', 'username': 'harsha', 'phonenumber': '9948775727', 'email': 'harsha', 'address': 'warangal', 'password': '082f51aba47229235d342eb95be14ddf7b2acb03d9d27c4c22225c2ff8fd11f4'}
-{'userid': '01192022183849', 'username': 'pooja', 'phonenumber': 'pooja', 'email': 'pooja', 'address': 'pooja', 'password': '0962ef04822f8ca5b341bcbcd783049a454e96b39d23fe9e18200a3edb400bae'}
-{'userid': '01192022184830', 'username': 'sreeja', 'phonenumber': 'check', 'email': 'check', 'address': 'check', 'password': '246444abd84dd39899047a053d70ed1607a12fe74c7dc6042fcb746e12b74913'}
